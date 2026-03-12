@@ -14,7 +14,7 @@ const RegisterForm = () => {
         /*if (loginInfo.email == "" || loginInfo.password == "") {
             return alert("both email and password are required !")
         }*/
-        axios.post("http://localhost:5000/api/users/login",loginInfo, {withCredentials:true})
+        axios.post("http://34.175.22.39:5000/api/users/login",loginInfo, {withCredentials:true})
             .then(res => {
                 setMessage(res.data[0])
                 console.log(message)

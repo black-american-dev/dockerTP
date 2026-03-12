@@ -12,7 +12,7 @@ function StudentDetails() {
     const navigate = useNavigate()
 
     useEffect(()=> {
-        axios.get(`http://localhost:5000/api/students/${id}`)
+        axios.get(`http://34.175.22.39:5000/api/students/${id}`)
         .then(
             res =>{ setStudent(res.data[0])
             console.log(res.data)
@@ -25,7 +25,7 @@ function StudentDetails() {
                 navigate("/register")
             }
         }
-        axios.delete(`http://localhost:5000/api/students/${id}`,{withCredentials: true})
+        axios.delete(`http://34.175.22.39:5000/api/students/${id}`,{withCredentials: true})
         .then(res => {
             console.log(res.data)
             navigate("/")

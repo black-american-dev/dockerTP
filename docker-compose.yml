@@ -1,14 +1,6 @@
-version: '3.8'
-
 services:
   microbackend:
     build: './backend'
     container_name: backend_service
     ports:
       - "5000:5000"
-    
-  microfrontend:
-    build: './frontend'
-    container_name: frontend_service
-    ports:
-      - "5173:5173"

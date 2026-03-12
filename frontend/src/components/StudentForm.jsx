@@ -25,7 +25,7 @@ const StudentForm = () => {
             return
         }
         console.log(studentInfo);
-        axios.post("http://localhost:5000/api/students",studentInfo, {withCredentials:true})
+        axios.post("http://34.175.22.39:5000/api/students",studentInfo, {withCredentials:true})
             .then(res => {
                 setMessage(res.data.message)
                 console.log(message)

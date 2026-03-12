@@ -12,7 +12,7 @@ const Modify = () => {
     const isLoggedIn = document.cookie.includes("token")
     const [message, setMessage] = useState({})
     useEffect(()=> {
-        axios.get(`http://localhost:5000/api/students/${id}`)
+        axios.get(`http://34.175.22.39:5000/api/students/${id}`)
         .then(res => {
             setStudentInfo(res.data[0])
         })
@@ -26,7 +26,7 @@ const Modify = () => {
             }
         }
         console.log(studentInfo);
-        axios.put(`http://localhost:5000/api/students/${id}`,studentInfo, {withCredentials:true})
+        axios.put(`http://34.175.22.39:5000/api/students/${id}`,studentInfo, {withCredentials:true})
             .then(res => {
                 setMessage(res.data.message)
                 console.log(message)

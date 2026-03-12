@@ -10,7 +10,10 @@ dotenv.config()
 const app = express()
 const PORT = process.env.PORT
 
-app.use(cors({origin:"http://localhost:5173", credentials:true}))
+app.use(cors({
+    origin: ["http://localhost:5173", "http://34.175.22.39:5173", "https://docker-tp.vercel.app/"],
+    credentials: true
+}))
 app.use(cookieParser())
 app.use(express.json())
 mongoDB()

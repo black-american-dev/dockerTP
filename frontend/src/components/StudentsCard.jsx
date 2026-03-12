@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 const StudentsCard = () => {
     const [students, setStudents] = useState([])
     useEffect(() => {
-        axios.get("http://localhost:5000/api/students/")
+        axios.get("http://34.175.22.39:5000/api/students/")
             .then(res => setStudents(res.data))
     })
 
